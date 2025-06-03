@@ -1,20 +1,21 @@
 body {
+
     background: rgb(5, 64, 112) ;
     color: rgb(255, 255, 255); 
     padding:10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif    
-}
+    font-family: Arial, sans-serif;
+}    
 
-#all-contents {
-max-width: 800px;   
-margin: auto;
+    #all-contents {
+    max-width: 800px;   
+    margin: auto;
 
 }
 
 /* navigation menu */
 nav {
     background: rgb(37, 31, 31);
-    display: felx;
+    display: flex;
     padding: 10px;
     justify-content: space-between; 
     margin-bottom: 20px;
@@ -45,12 +46,12 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #fff
+    color: #fff;
 }
 
 /* main container area beneath menu*/ 
 main {
-    background: rgb(37, 31, 31)
+    background: rgb(37, 31, 31);
     display: flex;
     margin-top: 20px;
 
@@ -73,9 +74,9 @@ main {
 }
 
 #interests {
-    border: 4px siver ridge;
+    border: 4px silver ridge;
     padding: 8px;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 h2, h3 {
