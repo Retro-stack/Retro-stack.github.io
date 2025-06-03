@@ -1,9 +1,11 @@
 body {
 
-    background: rgb(5, 64, 112) ;
-    color: rgb(255, 255, 255); 
-    padding:10px;
-    font-family: Arial, sans-serif;
+    background-image: url(https://media.tenor.com/Ll5WAF5C7bMAAAAM/dancing-streamer.gif);
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+   font-family:Arial, Helvetica, sans-serif
+
 }    
 
     #all-contents {
@@ -82,3 +84,5 @@ main {
 h2, h3 {
     margin: 0px;
 }
+
+/
