@@ -1,29 +1,23 @@
 body {
-
-    background-image: url(https://media.tenor.com/Ll5WAF5C7bMAAAAM/dancing-streamer.gif);
+ background-image: url('https://media.tenor.com/r3Vo5Zq73iYAAAAM/blud.gif');
    background-position: center;
    background-size: cover;
    overflow: hidden;
    font-family:Arial, Helvetica, sans-serif
-
-}    
-
-    #all-contents {
+}
+ #all-contents {
     max-width: 800px;   
     margin: auto;
+ }
 
-}
-
-/* navigation menu */
+    /* navigation menu */
 nav {
-    background: rgb(37, 31, 31);
+    background: rgb(46, 43, 43);
+    margin: 0 auto;
     display: flex;
     padding: 10px;
-    justify-content: space-between; 
-    margin-bottom: 20px;
-
 }
-
+  
 h1 {
     display: flex; 
     align-items: center; 
@@ -48,12 +42,12 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #fffdfd;
 }
 
 /* main container area beneath menu*/ 
 main {
-    background: rgb(37, 31, 31);
+    background: rgb(245, 238, 219);
     display: flex;
     margin-top: 20px;
 
@@ -85,4 +79,89 @@ h2, h3 {
     margin: 0px;
 }
 
-/
+nav {
+background: #7e7171;
+padding: 10px; 
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;   
+}
+
+body {
+background-color:#636782
+
+}
+
+.content h1 {
+  color: rgb(0, 0, 0);
+}
+
+#portfolio {
+ list-style-type: none;
+ padding-left:0;   
+}
+
+#portfolio li {
+    background: #f8f8f8;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+     
+}
+
+#portfolio li:hover{
+background: #9d3131;
+}
+
+#portfolio a {
+text-decoration: none;
+color: #000000
+}
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: none;
+  }
+
+  a {
+    font-size: 42px;
+  }
+
+  .sidebar {
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
+}
