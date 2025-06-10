@@ -4,8 +4,7 @@ const gravity = 0.5; // how much is subtracted from speedY each frame
 const friction = 1.5; // how much the player is slowed each frame
 const maxSpeed = 8; // maximum horizontal speed, not vertical
 const playerJumpStrength = 12; // this is subtracted from the speedY each jump
-const projectileSpeed = 8; // the speed of projectiles
-let shouldDrawGrid = false;
+
 
 /////////////////////////////////////////////////
 //////////ONLY CHANGE ABOVE THIS POINT///////////
@@ -97,7 +96,41 @@ var collectableList = {
   grace: { image: "images/collectables/grace-head.png" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
   max: { image: "images/collectables/max-head.png" },
-  steve: { image: "images/collectables/steve-head.png" },
-
-  
+  steve: { image: "images/collectables/steve-head.png" }
 };
+
+let jumpCount = 0;
+const maxJumps = 2;
+let isGrounded = false;
+const jumpForce = 10; // Adjust as needed
+
+function jump() {
+    if (jumpCount < maxJumps) {
+        jumpCount++;
+        player.velocityY = -jumpForce; // Apply upward velocity
+    }
+}
+
+function checkGroundCollision() {
+    if (player.isCollidingWithGround) {
+        isGrounded = true;
+        jumpCount = 0;
+    } else {
+        isGrounded = false;
+    }
+}
+
+// Example usage (assuming a jump button press):
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'keyup') {
+        jump();
+    }
+});
+
+// Game loop (simplified)
+function gameLoop() {
+    checkGroundCollision();
+    // Update player position, etc.
+    requestAnimationFrame(gameLoop);
+}
+gameLoop();
