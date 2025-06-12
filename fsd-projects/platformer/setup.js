@@ -98,39 +98,3 @@ var collectableList = {
   max: { image: "images/collectables/max-head.png" },
   steve: { image: "images/collectables/steve-head.png" }
 };
-
-let jumpCount = 0;
-const maxJumps = 2;
-let isGrounded = false;
-const jumpForce = 10; // Adjust as needed
-
-function jump() {
-    if (jumpCount < maxJumps) {
-        jumpCount++;
-        player.velocityY = -jumpForce; // Apply upward velocity
-    }
-}
-
-function checkGroundCollision() {
-    if (player.isCollidingWithGround) {
-        isGrounded = true;
-        jumpCount = 0;
-    } else {
-        isGrounded = false;
-    }
-}
-
-// Example usage (assuming a jump button press):
-document.addEventListener('keydown', function(event) {
-    if (event.code === 'keyup') {
-        jump();
-    }
-});
-
-// Game loop (simplified)
-function gameLoop() {
-    checkGroundCollision();
-    // Update player position, etc.
-    requestAnimationFrame(gameLoop);
-}
-gameLoop();
